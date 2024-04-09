@@ -55,6 +55,7 @@ body,
 .headerContent {
   display: flex;
   align-items: center;
+  position: absolute;
 }
 
 .logo {
@@ -129,6 +130,11 @@ body,
   .header {
     flex-direction: column;
   }
+
+  .headerContent {
+    display: flex;
+  }
+
   .mail-header {
     display: flex;
     flex-direction: column;
@@ -143,6 +149,9 @@ body,
   }
   .header {
     flex-direction: column;
+  }
+  .headerContent {
+    display: flex;
   }
   .mail-header {
     display: flex;

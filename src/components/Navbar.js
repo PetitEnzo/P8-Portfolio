@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav>
       <ul>
         {Navlinks.map((link) => (
-          <li>
+          <li key={link.name}>
             <NavLink
               to={link.path}
               style={({ isActive }) =>
