@@ -1,0 +1,177 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.content {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.portrait {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  height: 640px;
+  object-fit: cover;
+  width: calc(640px * 3 / 4);
+  margin: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 66px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: normal;
+  color: gray;
+}
+
+.roles {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.mic {
+  width: 20px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.skills {
+  display: flex;
+  margin: 10px;
+  gap: 5rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.bullet-list {
+  list-style-type: none;
+}
+
+.hard-skill {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
+}
+
+.hard-skill .bullet-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hard-skill .bullet-list li {
+  flex-basis: 45%;
+  margin-bottom: 1rem;
+}
+
+.logo-container {
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.soft-skill-paragraph,
+.perspective-paragraph {
+  font-size: 23px;
+  color: gray;
+}
+
+.logo-hard-skills,
+.logo-soft-skills,
+.logo-perspective-skills {
+  width: 50px;
+  height: 50px;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.projects h2 {
+  font-size: 55px;
+  color: black;
+  margin-right: 10px;
+}
+
+.projects p {
+  font-size: 23px;
+  color: gray;
+}
+
+.toProject {
+  justify-content: flex-end;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hero {
+    display: block;
+  }
+  .skills {
+    display: block;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills {
+    display: block;
+    margin-top: 10%;
+  }
+  .portrait {
+    height: 360px;
+    width: auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .portrait {
+    height: 360px;
+    margin-left: 25%;
+    width: auto;
+    margin-bottom: 10%;
+  }
+  .skills {
+    border: none;
+    margin-right: 10px;
+  }
+}

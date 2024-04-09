@@ -1,0 +1,157 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+html,
+body,
+.appBackground {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.appBackground {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.appBackground::before,
+.appBackground::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.appBackground::before {
+  background-image: url('../backgrounds/bg-main-light-1440w.jpg');
+  opacity: 1;
+}
+
+.appBackground::after {
+  background-image: url('../backgrounds/bg-main-light.svg');
+  opacity: 0.5;
+}
+
+/* app.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 20px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.npmEmbauche {
+  font-size: 1em;
+  margin: 0;
+}
+
+.mail h2 {
+  font-size: 55px;
+  color: black;
+  margin-right: 10px;
+}
+
+.toMail {
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.mail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mail {
+  padding-top: 15px;
+  margin-left: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-left {
+  color: gray;
+}
+
+.footer-right a {
+  margin-left: 10px;
+  color: gray;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-divider {
+  border: 0;
+  height: 0.5px;
+  background: gray;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+/* Tablettes */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .appBackground::before,
+  .appBackground::after {
+    background-position: center center;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+  .mail-header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .appBackground::before,
+  .appBackground::after {
+    background-position: center center;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .mail-header {
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    margin-top: 40px;
+  }
+  nav a {
+    padding: 5px 9px;
+  }
+}
