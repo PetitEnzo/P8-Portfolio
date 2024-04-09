@@ -161,6 +161,10 @@ h3 {
     height: 360px;
     width: auto;
   }
+  .bullet-list li {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
